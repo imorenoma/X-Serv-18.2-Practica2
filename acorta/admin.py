@@ -1,3 +1,5 @@
 from django.contrib import admin
+from .models import ListUrls
 
-# Register your models here.
+
+admin.site.register(ListUrls)
