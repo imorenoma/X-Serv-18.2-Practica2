@@ -9,12 +9,16 @@ def inicio(request):
     list = ListUrls.objects.all()
     response = ''
 
+    form = """
+        <form action="" method ='POST'> Insert Url<br>
+        <input type='text' name='url'><br>
+        <input type='submit' value='Send'>
+        </form>
+    """
+
     if request.method == "GET":
 
-        response = ("<form action="" method='POST'> Introduce Url<br>" +
-                    "<input type='text' name='url'><br>" +
-                    "<input type='submit' value='Send'>" +
-                    "</form></html>")
+        response = form
 
         if len(list) == 0:
             response = ("<form method='POST'>" + "Introduce Url" +
